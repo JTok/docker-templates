@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Beta>False</Beta>
+  <Beta>True</Beta>
   <Category>Backup</Category>
   <Overview>Restic is a program that does backups right.</Overview>
   <Support>https://restic.net/</Support>
@@ -17,68 +17,29 @@
       [b]Free: restic is free software and licensed under the BSD 2-Clause License and actively developed on GitHub.[/b][/br]
   </Description>
   <Changes>
-  	[center][font size=5]splunk Change Log[/font][/center]
-	[font size=4]2015.03.04[/font]
-	- Initial Release
-
-	[font size=4]2015.11.25[/font]
-	- Updated splunk to v6.3.1
-
-	[font size=4]2017.04.03[/font]
-	- Updated splunk to v6.5.3
-
-  [font size=4]2018.02.23[/font]
-	- Updated splunk to v7.0.2
+  	[center][font size=5]restic Change Log[/font][/center]
+  	[font size=4]2018.02.25[/font]
+  	- Initial Release
   </Changes>
-  <Registry>https://registry.hub.docker.com/u/jtok/splunk/</Registry>
-  <Repository>jtok/splunk</Repository>
+  <Registry>https://registry.hub.docker.com/u/jtok/restic/</Registry>
+  <Repository>jtok/restic</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment/>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>8000</HostPort>
-        <ContainerPort>8000</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-	  <Port>
-        <HostPort>8089</HostPort>
-        <ContainerPort>8089</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-	  <Port>
-        <HostPort>9997</HostPort>
-        <ContainerPort>9997</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-	  <Port>
-        <HostPort>514</HostPort>
-        <ContainerPort>514</ContainerPort>
-        <Protocol>udp</Protocol>
-      </Port>
-    </Publish>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/splunk/var</HostDir>
-      <ContainerDir>/opt/splunk/var</ContainerDir>
+      <HostDir>/mnt/user/appdata/restic/</HostDir>
+      <ContainerDir>/mnt/restic/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/splunk/etc</HostDir>
-      <ContainerDir>/opt/splunk/etc</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/var/log</HostDir>
+      <HostDir>/mnt/user/</HostDir>
       <ContainerDir>/data</ContainerDir>
       <Mode>ro</Mode>
     </Volume>
   </Data>
-  <Version>7.0.2</Version>
-  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
-  <Banner>http://i.imgur.com/eddJlVg.png</Banner>
-  <Icon>http://i.imgur.com/KKoQMo6.png</Icon>
+  <Icon>https://kalifi.org/images/10073512.png</Icon>
 </Container>
