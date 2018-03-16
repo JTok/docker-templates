@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+    <BaseImage>phusion/baseimage:0.10.0</BaseImage>
+    <Beta>True</Beta>
+    <Category>Network:Management</Category>
+    <Overview>UniFi Controller that updates to latest stable on restart.</Overview>
+    <Support>https://community.ubnt.com/</Support>
+    <Date>2018/03/16</Date>
+    <Name>unifi</Name>
+    <Description>
+        UniFi Controller for managing Ubiquiti UniFi products.
+    </Description>
+    <Changes>
+        [center][font size=5]UniFi Change Log[/font][/center]
+        [font size=4]2018.03.16[/font]
+        - Initial Release
+    </Changes>
+    <Registry>https://hub.docker.com/r/jtok/unifi</Registry>
+    <Repository>jtok/unifi</Repository>
+    <BindTime>true</BindTime>
+    <Privileged>false</Privileged>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>10001</HostPort>
+                <ContainerPort>10001</ContainerPort>
+                <Protocol>udp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>3478</HostPort>
+                <ContainerPort>3478</ContainerPort>
+                <Protocol>udp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>6789</HostPort>
+                <ContainerPort>6789</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>8080</HostPort>
+                <ContainerPort>8080</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>8081</HostPort>
+                <ContainerPort>8081</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>8443</HostPort>
+                <ContainerPort>8443</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>8843</HostPort>
+                <ContainerPort>8843</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+            <Port>
+                <HostPort>8880</HostPort>
+                <ContainerPort>8880</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir></HostDir>
+            <ContainerDir>/config</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Version>latest stable</Version>
+    <WebUI>https://[IP]:[PORT:8443]</WebUI>
+    <Icon>https://cdn.shopify.com/s/files/1/1439/1668/products/uap-ac-lr-01_1024x1024.png</Icon>
+</Container>
